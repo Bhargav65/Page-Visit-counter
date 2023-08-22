@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total visitor count</title>
+</head>
+<body>
+    
+            <center><h1>This page has been visited <span id="visitor-count">0</span> times.</h1> </center>
+
+  <script>
+    // Get the visitor count from local storage or initialize to 0
+    let visitorCount = parseInt(localStorage.getItem('visitorCount')) || 0;
+
+    // Increment the visitor count and update the page
+    visitorCount++;
+    document.getElementById('visitor-count').textContent = visitorCount;
+
+    // Save the updated visitor count to local storage
+    localStorage.setItem('visitorCount', visitorCount);
+    </script>
+</body>
+
+  
